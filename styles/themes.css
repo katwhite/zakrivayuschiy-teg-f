@@ -6,13 +6,10 @@
 */
 
 :root.theme-dark {
-    --main-font: 'Inter', sans-serif;
-    --accent-font: 'PressStart2P', sans-serif;
     --heading-font-weight: 785;
     --text-font-weight: 465;
     --background-color: #000;
     --accent-color: #00CC14;
-    --heart-color: #ff0000;
     --button-text-color: var(--accent-color);
     --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
     repeating-linear-gradient(to bottom, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
@@ -20,13 +17,10 @@
   }
 
 :root.theme-light {
-    --main-font: 'Inter', sans-serif;
-    --accent-font: 'PressStart2P', sans-serif;
     --heading-font-weight: 700;
     --text-font-weight: 400;
     --background-color: #fff;
     --accent-color: #000;
-    --heart-color: #ff0000;
     --button-text-color: var(--background-color);
     --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
     repeating-linear-gradient(to bottom, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
@@ -35,13 +29,10 @@
 
 @media (prefers-color-scheme: light) {
     :root {
-        --main-font: 'Inter', sans-serif;
-        --accent-font: 'PressStart2P', sans-serif;
         --heading-font-weight: 700;
         --text-font-weight: 400;
         --background-color: #fff;
         --accent-color: #000;
-        --heart-color: #ff0000;
         --button-text-color: var(--background-color);
         --background-image: repeating-linear-gradient(to right, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
     repeating-linear-gradient(to bottom, var(--background-color) 0 2px, rgb(220 20 60/0) 2px 4px),
