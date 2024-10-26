@@ -386,27 +386,6 @@ a:focus-visible {
   }
 }
 
-.card__like-button::after, .save-button::after {
-  content: '';
-  position: absolute;
-  block-size: 100%;
-  inline-size: 100%;
-  background-color: var(--accent-color);
-  inset-inline-start: 0;
-  inset-block-start: 0;
-  transform-origin: left;
-  
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-  
-}
-
-.card__like-button:hover::after, .save-button:hover::after {
-  transform: scaleX(1);
-  
-  transition: transform 0.5s ease-in-out;
-}
-
 .floppy-icon {
   inline-size: 28px;
   block-size: 28px;
@@ -426,6 +405,10 @@ a:focus-visible {
     max-inline-size: 353px;
     padding: 30px;
   }
+}
+
+.dialog:focus {
+  outline: none;
 }
 
 .dialog::backdrop {
@@ -455,6 +438,35 @@ a:focus-visible {
   inline-size: 100%;
   padding-block: 12.5px;
   /* flex-grow: 1; */
+}
+
+.dialog-button:focus {
+  outline: none;
+}
+
+.dialog-button:focus-visible, .dialog:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0px 0px var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button::after, .save-button::after, .dialog-button::after{
+  content: '';
+  position: absolute;
+  block-size: 100%;
+  inline-size: 100%;
+  background-color: var(--accent-color);
+  inset-inline-start: 0;
+  inset-block-start: 0;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.card__like-button:hover::after, .save-button:hover::after, .dialog-button:hover::after {
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .airbrush {
