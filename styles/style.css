@@ -39,7 +39,7 @@
 .card {
   border: 2px solid var(--accent-color);
   background-color: var(--background-color);
-  margin-block-end: 51px;
+  margin-block-end: 52px;
   inline-size: 100%;
   @media(width >= 376px) {
     max-inline-size: 696px;
@@ -167,6 +167,7 @@
   position: relative;
   border-block-start: 2px solid var(--accent-color);
   border-block-end: 4px solid var(--accent-color);
+  inline-size: 100%;
   @media(width >= 376px) {
     border-block-end: 2px solid var(--accent-color);
   }
@@ -200,11 +201,11 @@
 
 .card__image {
   inline-size: 100%;
-  max-inline-size: 371px;
+  block-size: 371px;
+  object-fit: cover;
   @media(width >= 376px) {
-    max-inline-size: 696px;
+    block-size: 696px;
   }
-  
 }
 
 .card__text {
@@ -213,13 +214,14 @@
   align-items: start;
   gap: 25px;
   padding: 25px;
+  padding-block-start: 20px;
   font-variation-settings: 'wght' var(--text-font-weight);
   font-size: 18px;
-  line-height: 20.7px;
+  line-height: 21px;
   @media(width >= 376px) {
     gap: 27px;
     padding: 24px;
-    line-height: 21px;
+    padding-block-start: 19px;
   }
 }
 
@@ -227,8 +229,12 @@
   display: flex;
   justify-content: flex-end;
   padding-inline: 25px;
-  padding-block-end: 25px;
+  padding-block: 4px 25px;
   gap: 5px;
+  @media(width >= 376px) {
+    gap: 6px;
+
+  }
 }
 
 .card__icon-button {
@@ -244,31 +250,17 @@
 }
 
 .card__like-button {
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 8.5px 34px 7.5px;
   transition: box-shadow 0.3s ease;
   max-inline-size: 130px;
-  
   @media(width >= 376px) {
     padding-block: 9.5px 9px;
   }
 }
 
-.card__icon-button:focus, .card__like-button:focus, a:focus {
-  outline: none;
-}
-
 a {
   text-decoration: underline;
   transition: outline 0.3s ease, filter 0.3s ease;
-}
-
-a:focus {
-  outline: none;
 }
 
 a:focus-visible {
@@ -334,16 +326,8 @@ a:hover {
   animation: heart-scale 0.3s ease-in 0.1s 1 alternate;
 }
 
-
-
 .like-icon.is-liked .sparks {
   animation: sparks 0.3s ease-in 0.3s 1 alternate;
-}
-
-.card__like-button:focus-visible {
-  outline: none;
-  box-shadow: 2px 2px 0px 0px var(--accent-color);
-  /* transition: box-shadow 0.3s ease; */
 }
 
 .button__text {
@@ -444,9 +428,15 @@ a:hover {
 .button {
   position: relative;
   transition: box-shadow 0.3s ease;
+
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.button:focus {
+.button:focus, .card__icon-button:focus {
   outline: none;
 }
 
