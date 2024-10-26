@@ -450,7 +450,7 @@ a:focus-visible {
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button::after, .save-button::after, .dialog-button::after{
+.card__like-button::after, .save-button::after, .dialog-button::after {
   content: '';
   position: absolute;
   block-size: 100%;
